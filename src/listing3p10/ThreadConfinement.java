@@ -22,5 +22,11 @@ public class ThreadConfinement  {
 }
 
 /*
+A single-threaded application might maintain a global database connection that is initialized at startup
+to avoid having to pass a Connection to every method.
 
+Since JDBC connections may not be thread-safe,
+a multithreaded application that uses a global connection without additional coordination is not thread-safe either.
+
+By using a ThreadLocal to store the JDBC connection, as in ConnectionHolder, each thread will have its own connection.
  */
