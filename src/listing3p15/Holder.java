@@ -14,13 +14,29 @@ public class Holder {
     }
 }
 
+class UnsafePublication {
+    // Unsafe publication
+    public Holder holder;
+
+    public void initialize() {
+        holder = new Holder(42);
+    }
+}
+
 /*
-You cannot rely on the integrity of partially constructed objects.
+Because synchronization was not used to make the Holder visible to other threads,
+we say the Holder was not properly published.
 
-An observing thread could see the object in an inconsistent state, and then later see its state suddenly change,
-even though it has not been modified since publication.
+Two things can go wrong with improperly published objects.
 
-In fact, if the Holder is published using the unsafe publication idiom,
-and a thread other than the publishing thread were to call assertSanity, it could throw AssertionError!
+Other threads could see a stale value for the holder field,
+and thus see a null reference or other older value even though a value has been placed in holder.
+
+But far worse, other threads could see an up-to-date value for the holder reference,
+but stale values for the state of the Holder.
+
+To make things even less predictable,
+a thread may see a stale value the first time it reads a field and then a more up-to-date value the next time,
+which is why assertSanity can throw AssertionError.
  */
 
