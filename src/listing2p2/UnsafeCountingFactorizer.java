@@ -1,6 +1,9 @@
 package listing2p2;
 
 import annotation.NotThreadSafe;
+import dummy.Servlet;
+import dummy.ServletRequest;
+import dummy.ServletResponse;
 
 import java.math.BigInteger;
 
@@ -41,17 +44,12 @@ public class UnsafeCountingFactorizer implements Servlet {
     }
 }
 
-class ServletRequest {
-}
-
-class ServletResponse {
-}
-
-interface Servlet {
-    void service(ServletRequest req, ServletResponse resp);
-}
-
 /*
+What happens when we add one element of state to what was a stateless object?
+Suppose we want to add a “hit counter” that measures the number of requests processed.
+The obvious approach is to add a long field to the servlet and increment it on each request,
+as shown in UnsafeCountingFactorizer in Listing 2.2.
+
 While the increment operation, ++count, may look like a single action because of its compact syntax, it is not ATOMIC,
 which means that it does not execute as a single, indivisible operation.
 

@@ -24,7 +24,7 @@ public final class Counter {
 /*
 An object’s state starts with its fields.
 If they are all of primitive type, the fields comprise the entire state.
-Counter has only one field, so the value field comprises its entire state.
+Counter in Listing 4.1 has only one field, so the value field comprises its entire state.
 
 The state of an object with n primitive fields is just the n-tuple of its field values;
 the state of a 2D Point is its (x, y) value.

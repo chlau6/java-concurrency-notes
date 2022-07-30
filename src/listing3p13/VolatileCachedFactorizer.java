@@ -1,6 +1,10 @@
 package listing3p13;
 
 import annotation.ThreadSafe;
+import dummy.Servlet;
+import dummy.ServletRequest;
+import dummy.ServletResponse;
+import listing3p12.OneValueCache;
 
 import java.math.BigInteger;
 import java.util.Arrays;
@@ -41,36 +45,8 @@ public class VolatileCachedFactorizer implements Servlet {
     }
 }
 
-interface Servlet {
-    void service(ServletRequest req, ServletResponse resp);
-}
-
-class ServletRequest {
-
-}
-
-class ServletResponse {
-
-}
-
-class OneValueCache {
-    private final BigInteger lastNumber;
-    private final BigInteger[] lastFactors;
-
-    public OneValueCache(BigInteger i, BigInteger[] factors) {
-        lastNumber = i;
-        lastFactors = Arrays.copyOf(factors, factors.length); }
-    public BigInteger[] getFactors(BigInteger i) {
-        if (lastNumber == null || !lastNumber.equals(i)) {
-            return null;
-        } else {
-            return Arrays.copyOf(lastFactors, lastFactors.length);
-        }
-    }
-}
-
 /*
-VolatileCachedFactorizer uses a OneValueCache to store the cached number and factors.
+VolatileCachedFactorizer in Listing 3.13 uses a OneValueCache to store the cached number and factors.
 When a thread sets the volatile cache field to reference a new OneValueCache,
 the new cached data becomes immediately visible to other threads.
 

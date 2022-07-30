@@ -1,5 +1,10 @@
 package listing3p9;
 
+import dummy.Animal;
+import dummy.AnimalPair;
+import dummy.Ark;
+import dummy.SpeciesGenderComparator;
+
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.SortedSet;
@@ -30,42 +35,22 @@ public class StackConfinement {
     }
 }
 
-/*
-Dummy Implementation
- */
-class Ark {
-    public void load(AnimalPair pair) {
-
-    }
-}
 
 /*
-Dummy Implementation
- */
-class SpeciesGenderComparator implements Comparator {
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
-    }
-}
+Stack confinement is a special case of thread confinement in which
+an object can only be reached through local variables.
 
-/*
-Dummy Implementation
- */
-class Animal {
-    public boolean isPotentialMate(Animal animal) {
-        return true;
-    }
-}
+Just as encapsulation can make it easier to preserve invariants,
+local variables can make it easier to confine objects to a thread.
 
-class AnimalPair {
-    public AnimalPair(Animal a, Animal b) {
+Local variables are intrinsically confined to the executing thread; they exist on the executing thread’s stack,
+which is not accessible to other threads.
 
-    }
-}
+Stack confinement (also called within-thread or thread-local usage,
+but not to be confused with the ThreadLocal library class) is simpler to maintain and
+less fragile than ad-hoc thread confinement.
 
-/*
-For primitively typed local variables, such as numPairs in loadTheArk,
+For primitively typed local variables, such as numPairs in loadTheArk in Listing 3.9,
 you cannot violate stack confinement even if you tried.
 
 There is no way to obtain a reference to a primitive variable,

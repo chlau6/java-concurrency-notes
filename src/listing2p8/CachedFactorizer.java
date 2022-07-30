@@ -2,6 +2,9 @@ package listing2p8;
 
 import annotation.GuardedBy;
 import annotation.ThreadSafe;
+import dummy.Servlet;
+import dummy.ServletRequest;
+import dummy.ServletResponse;
 
 import java.math.BigInteger;
 
@@ -71,18 +74,8 @@ public class CachedFactorizer implements Servlet {
     }
 }
 
-class ServletRequest {
-}
-
-class ServletResponse {
-}
-
-interface Servlet {
-    void service(ServletRequest req, ServletResponse resp);
-}
-
 /*
-CachedFactorizer restructures the servlet to use two separate synchronized blocks,
+CachedFactorizer in Listing 2.8 restructures the servlet to use two separate synchronized blocks,
 each limited to a short section of code.
 
 One guards the check-then-act sequence that tests whether we can just return the cached result,

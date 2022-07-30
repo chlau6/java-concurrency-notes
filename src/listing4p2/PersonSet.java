@@ -2,6 +2,7 @@ package listing4p2;
 
 import annotation.GuardedBy;
 import annotation.ThreadSafe;
+import dummy.Person;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,20 +11,18 @@ import java.util.Set;
 public class PersonSet {
     @GuardedBy("this")
     private final Set<Person> mySet = new HashSet<Person>();
+
     public synchronized void addPerson(Person p) {
         mySet.add(p);
     }
+
     public synchronized boolean containsPerson(Person p) {
         return mySet.contains(p);
     }
 }
 
-class Person {
-
-}
-
 /*
-PersonSet illustrates how confinement and locking can work together to make a class thread-safe
+PersonSet in Listing 4.2 illustrates how confinement and locking can work together to make a class thread-safe
 even when its component state variables are not.
 
 The state of PersonSet is managed by a HashSet, which is not thread-safe.

@@ -22,8 +22,16 @@ public class ThreadConfinement  {
 }
 
 /*
-A single-threaded application might maintain a global database connection that is initialized at startup
-to avoid having to pass a Connection to every method.
+A more formal means of maintaining thread confinement is ThreadLocal,
+which allows you to associate a per-thread value with a value-holding object.
+
+Thread-Local provides get and set accessormethods that
+maintain a separate copy of the value for each thread that uses it,
+so a get returns the most recent value passed to set from the currently executing thread.
+
+Thread-local variables are often used to prevent sharing in designs based on mutable Singletons or global variables.
+For example, a single-threaded application might maintain a global database connection that
+is initialized at startup to avoid having to pass a Connection to every method.
 
 Since JDBC connections may not be thread-safe,
 a multithreaded application that uses a global connection without additional coordination is not thread-safe either.

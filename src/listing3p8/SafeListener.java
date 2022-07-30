@@ -1,5 +1,9 @@
 package listing3p8;
 
+import dummy.Event;
+import dummy.EventListener;
+import dummy.EventSource;
+
 public class SafeListener {
     private final EventListener listener;
     private SafeListener() {
@@ -24,21 +28,9 @@ public class SafeListener {
     }
 }
 
-class EventSource {
-    public void registerListener(EventListener e) {
-
-    }
-}
-
-class Event {
-}
-
-class EventListener {
-    public void onEvent(Event e) {
-    }
-}
-
 /*
+A common mistake that can let the this reference escape during construction is to start a thread from a constructor.
+
 When an object creates a thread from its constructor, it almost always shares its this reference with the new thread,
 either explicitly (by passing it to the constructor) or
 implicitly (because the Thread or Runnable is an inner class of the owning object).

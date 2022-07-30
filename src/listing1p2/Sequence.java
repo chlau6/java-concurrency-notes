@@ -15,5 +15,6 @@ public class Sequence {
 }
 
 /*
-UnsafeSequence can be fixed by making getNext a synchronized method, thus preventing the unfortunate interaction
+UnsafeSequence can be fixed by making getNext a synchronized method, as shown in Sequence in Listing 1.2,
+thus preventing the unfortunate interaction
  */

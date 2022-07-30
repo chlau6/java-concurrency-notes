@@ -1,5 +1,7 @@
 package listing3p5;
 
+import dummy.Secret;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,18 +11,11 @@ public class PublishObject {
     public void initialize() {
         knownSecrets = new HashSet<Secret>();
     }
-
-    /*
-    Dummy Implementation
-     */
-    class Secret {
-
-    }
 }
 
 /*
 The most blatant form of publication is to store a reference in a public static field,
-where any class and thread could see it.
+where any class and thread could see it, as in Listing 3.5
 
 The initialize method instantiates a new HashSet and publishes it by storing a reference to it into knownSecrets.
 

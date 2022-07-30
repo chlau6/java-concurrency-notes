@@ -10,5 +10,5 @@ public class UnsafeState {
 
 /*
 Similarly, returning a reference from a nonprivate method also publishes the returned object.
-The above example publishes the supposedly private array of state abbreviations
+UnsafeStates in Listing 3.6 publishes the supposedly private array of state abbreviations.
  */

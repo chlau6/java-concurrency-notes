@@ -16,7 +16,8 @@ public class MutableInteger {
 }
 
 /*
-MutableInteger is not thread-safe because the value field is accessed from both get and set without synchronization.
+MutableInteger in Listing 3.2 is not thread-safe because
+the value field is accessed from both get and set without synchronization.
 
 Among other hazards, it is susceptible to stale values:
 if one thread calls set, other threads calling get may or may not see that update.

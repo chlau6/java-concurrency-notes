@@ -14,15 +14,6 @@ public class Holder {
     }
 }
 
-class UnsafePublication {
-    // Unsafe publication
-    public Holder holder;
-
-    public void initialize() {
-        holder = new Holder(42);
-    }
-}
-
 /*
 Because synchronization was not used to make the Holder visible to other threads,
 we say the Holder was not properly published.

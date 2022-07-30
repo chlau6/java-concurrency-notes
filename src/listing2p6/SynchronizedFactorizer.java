@@ -2,6 +2,9 @@ package listing2p6;
 
 import annotation.GuardedBy;
 import annotation.ThreadSafe;
+import dummy.Servlet;
+import dummy.ServletRequest;
+import dummy.ServletResponse;
 
 import java.math.BigInteger;
 import java.util.Vector;
@@ -50,20 +53,10 @@ public class SynchronizedFactorizer implements Servlet {
     }
 }
 
-class ServletRequest {
-}
-
-class ServletResponse {
-}
-
-interface Servlet {
-    void service(ServletRequest req, ServletResponse resp);
-}
-
 /*
 The machinery of synchronization makes it easy to restore thread safety to the factoring servlet.
 
-By adding synchronized keyword in the service method only one thread may enter service at a time.
+Listing 2.6 makes the service method synchronized, so only one thread may enter service at a time.
 
 SynchronizedFactorizer is now thread-safe; however, this approach is fairly extreme,
 since it inhibits multiple clients from using the factoring servlet simultaneously at all,

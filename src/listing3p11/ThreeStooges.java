@@ -21,7 +21,8 @@ public final class ThreeStooges {
 }
 
 /*
-Immutable objects can still use mutable objects internally to manage their state.
+Immutable objects can still use mutable objects internally to manage their state,
+as illustrated by ThreeStooges in Listing 3.11.
 
 While the Set that stores the names is mutable,
 the design of ThreeStooges makes it impossible to modify that Set after construction.

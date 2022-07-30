@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import java.util.Arrays;
 
 @Immutable
-class OneValueCache {
+public class OneValueCache {
     private final BigInteger lastNumber;
     private final BigInteger[] lastFactors;
 
@@ -25,6 +25,17 @@ class OneValueCache {
 }
 
 /*
+In UnsafeCachingFactorizer on page, we tried to use two AtomicReferences to store the last number and last factors,
+but this was not thread-safe because we could not fetch or update the two related values atomically.
+Using volatile variables for these values would not be thread-safe for the same reason.
+However, immutable objects can sometimes provide a weak form of atomicity.
+
+The factoring servlet performs two operations that must be atomic:
+updating the cached result and conditionally fetching the cached factors if
+the cached number matches the requested number.
+Whenever a group of related data items must be acted on atomically,
+consider creating an immutable holder class for them, such as OneValueCache in Listing 3.12.
+
 Race conditions in accessing or updating multiple related variables can be eliminated by
 using an immutable object to hold all the variables.
 
