@@ -10,14 +10,14 @@ public class NumberRange {
     public void setLower(int i) {
         // Warning -- unsafe check-then-act
         if (i > upper.get()) {
-            throw new IllegalArgumentException("can’t set lower to " + i + " > upper");
+            throw new IllegalArgumentException("can't set lower to " + i + " > upper");
         }
         lower.set(i);
     }
     public void setUpper(int i) {
         // Warning -- unsafe check-then-act
         if (i < lower.get()) {
-            throw new IllegalArgumentException("can’t set upper to " + i + " < lower");
+            throw new IllegalArgumentException("can't set upper to " + i + " < lower");
         }
         upper.set(i);
     }
@@ -33,7 +33,7 @@ The setLower and setUpper methods attempt to respect this invariant, but do so p
 Both setLower and setUpper are check-then-act sequences, but they do not use sufficient locking to make them atomic.
 If the number range holds (0, 10), and one thread calls setLower(5) while another thread calls setUpper(4),
 with some unlucky timing both will pass the checks in the setters and both modifications will be applied.
-The result is that the range now holds (5, 4)—an invalid state.
+The result is that the range now holds (5, 4)-an invalid state.
 
 So while the underlying AtomicIntegers are thread-safe, the composite class is not.
 Because the underlying state variables lower and upper are not independent,

@@ -18,7 +18,7 @@ public class StackConfinement {
         int numPairs = 0;
         Animal candidate = null;
 
-        // animals confined to method, don’t let them escape!
+        // animals confined to method, don't let them escape!
         animals = new TreeSet<Animal>(new SpeciesGenderComparator());
         animals.addAll(candidates);
 
@@ -43,7 +43,7 @@ an object can only be reached through local variables.
 Just as encapsulation can make it easier to preserve invariants,
 local variables can make it easier to confine objects to a thread.
 
-Local variables are intrinsically confined to the executing thread; they exist on the executing thread’s stack,
+Local variables are intrinsically confined to the executing thread; they exist on the executing thread's stack,
 which is not accessible to other threads.
 
 Stack confinement (also called within-thread or thread-local usage,

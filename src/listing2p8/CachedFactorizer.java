@@ -81,7 +81,7 @@ each limited to a short section of code.
 One guards the check-then-act sequence that tests whether we can just return the cached result,
 and the other guards updating both the cached number and the cached factors.
 
-As a bonus, we’ve reintroduced the hit counter and added a “cache hit” counter as well,
+As a bonus, we've reintroduced the hit counter and added a "cache hit" counter as well,
 updating them within the initial synchronized block.
 
 Because these counters constitute shared mutable state as well,

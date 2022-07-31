@@ -41,11 +41,11 @@ The getLocation method returns an unmodifiable copy of the underlying Map.
 Callers cannot add or remove vehicles,
 but could change the location of one of the vehicles by mutating the SafePoint values in the returned Map.
 
-Again, the “live” nature of the Map may be a benefit or a drawback, depending on the requirements.
+Again, the "live" nature of the Map may be a benefit or a drawback, depending on the requirements.
 
 PublishingVehicleTracker is thread-safe,
 but would not be so if it imposed any additional constraints on the valid values for vehicle locations.
 
-If it needed to be able to “veto” changes to vehicle locations or to take action when a location changes,
+If it needed to be able to "veto" changes to vehicle locations or to take action when a location changes,
 the approach taken by PublishingVehicleTracker would not be appropriate.
  */

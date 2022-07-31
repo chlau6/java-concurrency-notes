@@ -32,7 +32,7 @@ public class SafePoint {
 }
 
 /*
-Let’s construct another version of the vehicle tracker that publishes its underlying mutable state.
+Let's construct another version of the vehicle tracker that publishes its underlying mutable state.
 Again, we need to modify the interface a little bit to accommodate this change,
 this time using mutable but thread-safe points.
 

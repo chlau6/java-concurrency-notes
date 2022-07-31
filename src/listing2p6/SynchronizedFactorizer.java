@@ -62,5 +62,5 @@ SynchronizedFactorizer is now thread-safe; however, this approach is fairly extr
 since it inhibits multiple clients from using the factoring servlet simultaneously at all,
 resulting in unacceptably poor responsiveness.
 
-This problem—which is a performance problem, not a thread safety problem.
+This problem - which is a performance problem, not a thread safety problem.
  */

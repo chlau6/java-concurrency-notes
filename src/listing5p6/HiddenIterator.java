@@ -32,9 +32,9 @@ public class HiddenIterator {
 /*
 There is no explicit iteration in HiddenIterator, but the code in bold entails iteration just the same.
 The string concatenation gets turned by the compiler into a call to StringBuilder.append(Object),
-which in turn invokes the collection’s toString method—
+which in turn invokes the collection's toString method-
 and the implementation of toString in the standard collections iterates the collection and
-calls toString on each element to produce a nicely formatted representation of the collection’s contents.
+calls toString on each element to produce a nicely formatted representation of the collection's contents.
 
 The addTenThings method could throw ConcurrentModificationException,
 because the collection is being iterated by toString in the process of preparing the debugging message.

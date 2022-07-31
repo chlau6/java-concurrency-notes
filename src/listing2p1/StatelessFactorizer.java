@@ -45,7 +45,7 @@ and packages the results into the servlet response.
 
 StatelessFactorizer is stateless: it has no fields and references no fields from other classes.
 
-The transient state for a particular computation exists solely in local variables that are stored on the thread’s stack
+The transient state for a particular computation exists solely in local variables that are stored on the thread's stack
 and are accessible only to the executing thread.
 
 One thread accessing a StatelessFactorizer cannot influence the result of another thread accessing the same

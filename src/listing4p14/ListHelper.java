@@ -24,13 +24,13 @@ public class ListHelper<E> {
 Listing 4.14 shows a failed attempt to create a helper class with
 an atomic put-if-absent operation for operating on a thread-safe List.
 
-Why wouldn’t this work? After all, putIfAbsent is synchronized, right?
+Why wouldn't this work? After all, putIfAbsent is synchronized, right?
 The problem is that it synchronizes on the wrong lock.
-Whatever lock the List uses to guard its state, it sure isn’t the lock on the ListHelper.
+Whatever lock the List uses to guard its state, it sure isn't the lock on the ListHelper.
 
 ListHelper provides only the illusion of synchronization; the various list operations, while all synchronized,
 use different locks, which means that putIfAbsent is not atomic relative to other operations on the List.
-So there is no guarantee that another thread won’t modify the list while putIfAbsent is executing.
+So there is no guarantee that another thread won't modify the list while putIfAbsent is executing.
 
 To make this approach work,
 we have to use the same lock that the List uses by using client-side locking or external locking.

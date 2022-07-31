@@ -25,7 +25,7 @@ separately maintained source files.
 
 If the underlying class were to change its synchronization policy by
 choosing a different lock to guard its state variables, the subclass would subtly and silently break,
-because it no longer used the right lock to control concurrent access to the base class’s state.
+because it no longer used the right lock to control concurrent access to the base class's state.
 (The synchronization policy of Vector is fixed by its specification,
 so BetterVector would not suffer from this problem.)
  */

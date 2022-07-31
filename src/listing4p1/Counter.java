@@ -22,7 +22,7 @@ public final class Counter {
 }
 
 /*
-An object’s state starts with its fields.
+An object's state starts with its fields.
 If they are all of primitive type, the fields comprise the entire state.
 Counter in Listing 4.1 has only one field, so the value field comprises its entire state.
 

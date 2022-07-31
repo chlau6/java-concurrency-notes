@@ -151,7 +151,7 @@ provides thread safety even if the List is not thread-safe or changes its lockin
 
 While the extra layer of synchronization may add some small performance penalty,
 the implementation in ImprovedList is less fragile than attempting to mimic the locking strategy of another object.
-In effect, we’ve used the Java monitor pattern to encapsulate an existing List,
+In effect, we've used the Java monitor pattern to encapsulate an existing List,
 and this is guaranteed to provide thread safety so long as
 our class holds the only outstanding reference to the underlying List.
  */

@@ -36,7 +36,7 @@ either explicitly (by passing it to the constructor) or
 implicitly (because the Thread or Runnable is an inner class of the owning object).
 
 The new thread might then be able to see the owning object before it is fully constructed.
-There’s nothing wrong with creating a thread in a constructor, but it is best not to start the thread immediately.
+There's nothing wrong with creating a thread in a constructor, but it is best not to start the thread immediately.
 Instead, expose a start or initialize method that starts the owned thread.
 
 Calling an overridable instance method (one that is neither private nor final) from the constructor

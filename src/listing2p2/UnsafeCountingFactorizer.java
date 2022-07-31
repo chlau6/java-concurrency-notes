@@ -46,7 +46,7 @@ public class UnsafeCountingFactorizer implements Servlet {
 
 /*
 What happens when we add one element of state to what was a stateless object?
-Suppose we want to add a “hit counter” that measures the number of requests processed.
+Suppose we want to add a "hit counter" that measures the number of requests processed.
 The obvious approach is to add a long field to the servlet and increment it on each request,
 as shown in UnsafeCountingFactorizer in Listing 2.2.
 

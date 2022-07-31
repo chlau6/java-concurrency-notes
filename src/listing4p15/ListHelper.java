@@ -30,7 +30,7 @@ client-side locking is even more fragile because it entails putting locking code
 are totally unrelated to C.
 
 Exercise care when using client-side locking on classes that do not commit to their locking strategy.
-Client-side locking has a lot in common with class extension—
+Client-side locking has a lot in common with class extension-
 they both couple the behavior of the derived class to the implementation of the base class.
 
 Just as extension violates encapsulation of implementation,

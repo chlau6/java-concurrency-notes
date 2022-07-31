@@ -31,7 +31,7 @@ and must have a plan for responding to interruption.
 For library code, there are basically two choices:
 
 Propagate the InterruptedException.
-This is often the most sensible policy if you can get away with it—
+This is often the most sensible policy if you can get away with it-
 just propagate the InterruptedException to your caller.
 This could involve not catching InterruptedException,
 or catching it and throwing it again after performing some brief activity-specific cleanup.
