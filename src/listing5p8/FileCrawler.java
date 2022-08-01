@@ -35,9 +35,7 @@ public class FileCrawler implements Runnable {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private boolean alreadyIndexed(File file) {
         return true;
     }

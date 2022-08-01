@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-import static listing5p13.Listing5P13.launderThrowable;
+import static listing5p13.UncheckedExceptionWrapper.launderThrowable;
 
 public class FutureRenderer {
     private static final int NTHREADS = 100;
@@ -42,21 +42,15 @@ public class FutureRenderer {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void renderImage(ImageData data) {
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void renderText(CharSequence source) {
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private List<ImageInfo> scanForImageInfo(CharSequence source) {
         return new ArrayList<>();
     }

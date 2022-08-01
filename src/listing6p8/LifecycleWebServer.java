@@ -44,29 +44,21 @@ class LifecycleWebServer {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void log(String taskSubmissionRejected, RejectedExecutionException e) {
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private Request readRequest(Socket connection) {
         return new Request();
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private boolean isShutdownRequest(Request req) {
         return true;
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void dispatchRequest(Request req) {
     }
 }

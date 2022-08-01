@@ -9,9 +9,7 @@ public class CountingSheep extends Thread {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void countSomeSheep() {
 
     }

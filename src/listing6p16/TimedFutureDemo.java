@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
-public class Listing6P16 {
+public class TimedFutureDemo {
     private static final int NTHREADS = 100;
     private static final long TIME_BUDGET = 5000;
     private final ExecutorService exec = Executors.newFixedThreadPool(NTHREADS);

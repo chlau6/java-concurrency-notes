@@ -8,7 +8,7 @@ import dummy.TravelQuote;
 import java.util.*;
 import java.util.concurrent.*;
 
-public class Listing6P17 {
+public class FutureInvokeAllDemo {
     private static final int NTHREADS = 100;
     private final ExecutorService exec = Executors.newFixedThreadPool(NTHREADS);
 

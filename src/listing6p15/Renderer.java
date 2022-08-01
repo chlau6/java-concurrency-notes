@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-import static listing5p13.Listing5P13.launderThrowable;
+import static listing5p13.UncheckedExceptionWrapper.launderThrowable;
 
 public class Renderer {
     private final ExecutorService executor;
@@ -40,22 +40,16 @@ public class Renderer {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private List<ImageInfo> scanForImageInfo(CharSequence source) {
         return new ArrayList<>();
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void renderImage(ImageData imageData) {
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void renderText(CharSequence source) {
     }
 }

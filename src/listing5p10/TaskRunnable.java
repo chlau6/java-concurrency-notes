@@ -16,9 +16,7 @@ public class TaskRunnable implements Runnable {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void processTask(Task task) throws InterruptedException {
 
     }

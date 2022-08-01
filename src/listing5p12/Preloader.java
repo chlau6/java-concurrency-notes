@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-import static listing5p13.Listing5P13.launderThrowable;
+import static listing5p13.UncheckedExceptionWrapper.launderThrowable;
 
 public class Preloader {
     private final FutureTask<ProductInfo> future = new FutureTask<ProductInfo>(
@@ -35,9 +35,7 @@ public class Preloader {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private ProductInfo loadProductInfo() throws DataLoadException {
         return new ProductInfo();
     }

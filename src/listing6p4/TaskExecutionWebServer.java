@@ -22,9 +22,7 @@ class TaskExecutionWebServer {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private static void handleRequest(Socket connection) {
     }
 }

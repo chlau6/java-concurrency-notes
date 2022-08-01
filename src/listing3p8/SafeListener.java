@@ -14,9 +14,7 @@ public class SafeListener {
         };
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void doSomething(Event e) {
 
     }

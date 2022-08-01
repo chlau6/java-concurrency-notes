@@ -1,6 +1,6 @@
 package listing5p13;
 
-public class Listing5P13 {
+public class UncheckedExceptionWrapper {
     public static RuntimeException launderThrowable(Throwable t) {
         if (t instanceof RuntimeException) {
             return (RuntimeException) t;

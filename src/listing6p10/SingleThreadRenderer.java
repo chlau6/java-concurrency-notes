@@ -16,22 +16,16 @@ public class SingleThreadRenderer {
             renderImage(data);
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private ImageInfo[] scanForImageInfo(CharSequence source) {
         return new ImageInfo[] {};
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void renderImage(ImageData data) {
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void renderText(CharSequence source) {
     }
 }

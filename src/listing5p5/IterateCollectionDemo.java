@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Listing5P5 {
+public class IterateCollectionDemo {
     List<Widget> widgetList = Collections.synchronizedList(new ArrayList<Widget>());
 
     public void iterate() {
@@ -16,9 +16,7 @@ public class Listing5P5 {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void doSomething(Widget w) {
 
     }

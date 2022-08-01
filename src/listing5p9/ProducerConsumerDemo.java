@@ -8,7 +8,7 @@ import java.io.FileFilter;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class Listing5P9 {
+public class ProducerConsumerDemo {
     public final static int BOUND = 10;
     private static final int N_CONSUMERS = 2;
 

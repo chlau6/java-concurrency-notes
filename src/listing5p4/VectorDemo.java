@@ -2,7 +2,7 @@ package listing5p4;
 
 import java.util.Vector;
 
-public class Listing5P4 {
+public class VectorDemo {
     public void iterate(Vector vector) {
         synchronized (vector) {
             for (int i = 0; i < vector.size(); i++) {
@@ -11,9 +11,7 @@ public class Listing5P4 {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void doSomething(Object o) {
 
     }

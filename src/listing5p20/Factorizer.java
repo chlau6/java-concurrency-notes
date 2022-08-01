@@ -27,29 +27,21 @@ public class Factorizer implements Servlet {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private BigInteger[] factor(BigInteger arg) {
         return new BigInteger[] {};
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private BigInteger extractFromRequest(ServletRequest req) {
         return BigInteger.ONE;
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void encodeError(ServletResponse resp, String factorizationInterrupted) {
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void encodeIntoResponse(ServletResponse resp, BigInteger[] compute) {
     }
 }

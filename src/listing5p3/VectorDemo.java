@@ -2,16 +2,14 @@ package listing5p3;
 
 import java.util.Vector;
 
-public class Listing5P3 {
+public class VectorDemo {
     public void iterate(Vector vector) {
         for (int i = 0; i < vector.size(); i++) {
             doSomething(vector.get(i));
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void doSomething(Object o) {
 
     }

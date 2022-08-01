@@ -20,9 +20,7 @@ public class Indexer implements Runnable {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void indexFile(File file) {
 
     }

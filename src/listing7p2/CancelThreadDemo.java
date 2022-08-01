@@ -7,7 +7,7 @@ import java.util.List;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-public class Listing7P2 {
+public class CancelThreadDemo {
     List<BigInteger> aSecondOfPrimes() throws InterruptedException {
         PrimeGenerator generator = new PrimeGenerator();
         new Thread(generator).start();
@@ -22,7 +22,7 @@ public class Listing7P2 {
 
 /*
 Listing 7.2 shows a sample use of this class that lets the prime generator run for one second before cancelling it.
-The generator won’t necessarily stop after exactly one second,
+The generator won't necessarily stop after exactly one second,
 since there may be some delay between the time that cancellation is requested and
 the time that the run loop next checks for cancellation.
 

@@ -4,7 +4,7 @@ import listing5p16.Computable;
 
 import java.util.concurrent.*;
 
-import static listing5p13.Listing5P13.launderThrowable;
+import static listing5p13.UncheckedExceptionWrapper.launderThrowable;
 
 public class Memoizer<A, V> implements Computable<A, V> {
     private final ConcurrentMap<A, Future<V>> cache = new ConcurrentHashMap<A, Future<V>>();

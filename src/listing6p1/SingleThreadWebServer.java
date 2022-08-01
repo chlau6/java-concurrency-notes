@@ -13,9 +13,7 @@ class SingleThreadWebServer {
         }
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private static void handleRequest(Socket connection) {
 
     }

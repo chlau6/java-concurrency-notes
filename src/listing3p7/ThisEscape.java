@@ -13,9 +13,7 @@ public class ThisEscape {
         });
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void doSomething(Event e) {
 
     }

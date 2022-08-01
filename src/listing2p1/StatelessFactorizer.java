@@ -16,23 +16,17 @@ public class StatelessFactorizer implements Servlet {
         encodeIntoResponse(resp, factors);
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private BigInteger extractFromRequest(ServletRequest req) {
         return BigInteger.ONE;
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private BigInteger[] factor(BigInteger i) {
         return new BigInteger[] {BigInteger.ONE};
     }
 
-    /*
-    Dummy Implementation
-     */
+    /* Dummy Implementation */
     private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
 
     }

@@ -2,7 +2,7 @@ package listing5p1;
 
 import java.util.Vector;
 
-public class Listing5P1 {
+public class VectorDemo {
     public static Object getLast(Vector list) {
         int lastIndex = list.size() - 1;
         return list.get(lastIndex);
