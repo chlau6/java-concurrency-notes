@@ -22,24 +22,6 @@ public class InterruptNoncancelableTaks {
                 Thread.currentThread().interrupt();
         }
     }
-
-    public static void main(String[] args) {
-        boolean interrupt = false;
-        try {
-            while (true) {
-                try {
-                    throw new Exception();
-                } catch (Exception e) {
-                    interrupt = true;
-                    System.out.println(e.getMessage());
-                }
-            }
-        } finally {
-            if (interrupt) {
-                Thread.currentThread().interrupt();
-            }
-        }
-    }
 }
 
 /*
