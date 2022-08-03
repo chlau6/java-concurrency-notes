@@ -38,5 +38,5 @@ the ScheduledFuture returned by schedule to cancel the cancellation task.)
 
 Further, if the task is not responsive to interruption, timedRun will not return until the task finishes,
 which may be long after the desired timeout (or even not at all).
-A timed run service that doesn’t return after the specified time is likely to be irritating to its callers.
+A timed run service that doesn't return after the specified time is likely to be irritating to its callers.
  */
