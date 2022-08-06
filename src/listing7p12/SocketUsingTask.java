@@ -41,7 +41,7 @@ public abstract class SocketUsingTask<T> implements CancellableTask<T> {
 /*
 SocketUsingTask implements CancellableTask and defines Future.cancel to close the socket as well as call super.cancel.
 If a SocketUsingTask is cancelled through its Future, the socket is closed and the executing thread is interrupted.
-This increases the task’s responsiveness to cancellation:
+This increases the task's responsiveness to cancellation:
 not only can it safely call interruptible blocking methods while remaining responsive to cancellation,
 but it can also call blocking socket I/O methods.
  */

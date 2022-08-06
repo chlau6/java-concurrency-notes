@@ -44,6 +44,7 @@ public class IndexingService {
 
         }
     }
+
     class IndexerThread extends Thread {
         /* Listing 7.19 */
         public void run() {

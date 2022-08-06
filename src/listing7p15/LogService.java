@@ -71,7 +71,7 @@ public class LogService {
 /*
 The way to provide reliable shutdown for LogWriter is to fix the race condition,
 which means making the submission of a new log message atomic.
-But we don’t want to hold a lock while trying to enqueue the message, since put could block.
+But we don't want to hold a lock while trying to enqueue the message, since put could block.
 Instead, we can atomically check for shutdown and conditionally increment a counter to
-“reserve” the right to submit a message, as shown in LogService in Listing 7.15.
+"reserve" the right to submit a message, as shown in LogService in Listing 7.15.
  */

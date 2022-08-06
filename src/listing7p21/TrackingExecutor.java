@@ -64,6 +64,6 @@ By encapsulating an ExecutorService and instrumenting execute (and similarly sub
 which tasks were cancelled after shutdown,
 TrackingExecutor can identify which tasks started but did not complete normally.
 After the executor terminates, getCancelledTasks returns the list of cancelled tasks.
-In order for this technique to work, the tasks must preserve the thread’s interrupted status when they return,
+In order for this technique to work, the tasks must preserve the thread's interrupted status when they return,
 which well behaved tasks will do anyway.
  */
