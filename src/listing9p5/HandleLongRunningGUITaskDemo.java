@@ -32,15 +32,14 @@ public class HandleLongRunningGUITaskDemo {
                             });
                         }
                     }
+
+                    /* Dummy Implementation */
+                    private void doBigComputation() {
+                    }
                 });
             }
         });
     }
-
-    /* Dummy Implementation */
-    private void doBigComputation() {
-    }
-
 }
 
 /*

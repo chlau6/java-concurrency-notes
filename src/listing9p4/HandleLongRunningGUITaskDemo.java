@@ -19,13 +19,15 @@ public class HandleLongRunningGUITaskDemo {
                     public void run() {
                         doBigComputation();
                     }
+
+                    /* Dummy Implementation */
+                    private void doBigComputation() {
+                    }
                 });
             }});
     }
 
-    /* Dummy Implementation */
-    private void doBigComputation() {
-    }
+
 
 }
 

@@ -29,6 +29,19 @@ public class CancelLongRunningGUITaskDemo {
                                 doSomeWork();
                             }
                         }
+
+                        /* Dummy Implementation */
+                        private boolean moreWork() {
+                            return true;
+                        }
+
+                        /* Dummy Implementation */
+                        private void cleanUpPartialWork() {
+                        }
+
+                        /* Dummy Implementation */
+                        private void doSomeWork() {
+                        }
                     });
                 };
             }});
@@ -39,20 +52,6 @@ public class CancelLongRunningGUITaskDemo {
                     runningTask.cancel(true);
             }});
     }
-
-    /* Dummy Implementation */
-    private boolean moreWork() {
-        return true;
-    }
-
-    /* Dummy Implementation */
-    private void cleanUpPartialWork() {
-    }
-
-    /* Dummy Implementation */
-    private void doSomeWork() {
-    }
-
 }
 
 /*

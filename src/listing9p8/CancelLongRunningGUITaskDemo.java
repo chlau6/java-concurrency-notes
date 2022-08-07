@@ -39,6 +39,15 @@ public class CancelLongRunningGUITaskDemo {
                         label.setText("done");
                     }
 
+                    /* Dummy Implementation */
+                    private boolean moreWork() {
+                        return true;
+                    }
+
+                    /* Dummy Implementation */
+                    private void doSomeWork() {
+                    }
+
                     @Override
                     public boolean cancel(boolean mayInterruptIfRunning) {
                         return false;
@@ -74,15 +83,6 @@ public class CancelLongRunningGUITaskDemo {
                 backgroundExec.execute(task);
             }
         });
-    }
-
-    /* Dummy Implementation */
-    private boolean moreWork() {
-        return true;
-    }
-
-    /* Dummy Implementation */
-    private void doSomeWork() {
     }
 }
 
