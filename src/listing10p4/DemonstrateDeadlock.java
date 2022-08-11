@@ -47,7 +47,7 @@ public class DemonstrateDeadlock {
 }
 
 /*
-You may think we’re overstating the risk of deadlock because locks are usually held only briefly,
+You may think we're overstating the risk of deadlock because locks are usually held only briefly,
 but deadlocks are a serious problem in real systems.
 A production application may perform billions of lock acquire-release cycles per day.
 Only one of those needs to be timed just wrong to bring the application to deadlock,

@@ -54,7 +54,7 @@ It involves a few extra lines of code, but eliminates the possibility of deadloc
 
 In the rare case that two objects have the same hash code,
 we must use an arbitrary means of ordering the lock acquisitions, and this reintroduces the possibility of deadlock.
-To prevent inconsistent lock ordering in this case, a third “tie breaking” lock is used.
+To prevent inconsistent lock ordering in this case, a third "tie breaking" lock is used.
 By acquiring the tie-breaking lock before acquiring either Account lock,
 we ensure that only one thread at a time performs the risky task of acquiring two locks in an arbitrary order,
 eliminating the possibility of deadlock (so long as this mechanism is used consistently).

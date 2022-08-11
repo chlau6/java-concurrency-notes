@@ -3,7 +3,7 @@ package dummy;
 import java.math.BigInteger;
 
 public class DollarAmount implements Comparable<DollarAmount> {
-    public DollarAmount(int nextInt) {
+    public DollarAmount(int amount) {
     }
 
     @Override

@@ -69,7 +69,7 @@ Taxi represents an individual taxi with a location and a destination; Dispatcher
 
 While no method explicitly acquires two locks, callers of setLocation and getImage can acquire two locks just the same.
 If a thread calls setLocation in response to an update from a GPS receiver,
-it first updates the taxi’s location and then checks to see if it has reached its destination.
+it first updates the taxi's location and then checks to see if it has reached its destination.
 If it has, it informs the dispatcher that it needs a new destination.
 Since both setLocation and notifyAvailable are synchronized,
 the thread calling setLocation acquires the Taxi lock and then the Dispatcher lock.

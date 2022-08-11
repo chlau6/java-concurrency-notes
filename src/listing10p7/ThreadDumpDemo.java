@@ -35,7 +35,7 @@ public class ThreadDumpDemo {
 }
 
 /*
-We’ve shown only the portion of the thread dump relevant to identifying the deadlock.
+We've shown only the portion of the thread dump relevant to identifying the deadlock.
 The JVM has done a lot of work for us in diagnosing the deadlock - which locks are causing the problem,
 which threads are involved, which other locks they hold, and whether other threads are being indirectly inconvenienced.
 One thread holds the lock on the MumbleDBConnection and is waiting to acquire the lock on the MumbleDBCallableStatement; 
