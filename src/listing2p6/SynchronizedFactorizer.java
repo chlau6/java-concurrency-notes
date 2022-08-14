@@ -7,7 +7,6 @@ import dummy.ServletRequest;
 import dummy.ServletResponse;
 
 import java.math.BigInteger;
-import java.util.Vector;
 
 @ThreadSafe
 public class SynchronizedFactorizer implements Servlet {

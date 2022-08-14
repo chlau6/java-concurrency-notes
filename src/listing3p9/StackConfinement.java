@@ -35,7 +35,6 @@ public class StackConfinement {
     }
 }
 
-
 /*
 Stack confinement is a special case of thread confinement in which
 an object can only be reached through local variables.

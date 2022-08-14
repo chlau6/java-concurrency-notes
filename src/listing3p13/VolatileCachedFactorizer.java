@@ -7,7 +7,6 @@ import dummy.ServletResponse;
 import listing3p12.OneValueCache;
 
 import java.math.BigInteger;
-import java.util.Arrays;
 
 @ThreadSafe
 public class VolatileCachedFactorizer implements Servlet {
