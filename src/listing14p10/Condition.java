@@ -30,6 +30,7 @@ Both of these factors make it impossible to enforce the uniform waiter requireme
 If you want to write a concurrent object with multiple condition predicates,
 or you want to exercise more control over the visibility of the condition queue,
 the explicit Lock and Condition classes offer a more flexible alternative to intrinsic locks and condition queues.
+
 A Condition is associated with a single Lock, just as a condition queue is associated with a single intrinsic lock;
 to create a Condition, call Lock.newCondition on the associated lock.
 And just as Lock offers a richer feature set than intrinsic locking,
