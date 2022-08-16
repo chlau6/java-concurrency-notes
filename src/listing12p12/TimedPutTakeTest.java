@@ -1,9 +1,7 @@
 package listing12p12;
 
-import junit.framework.TestCase;
 import listing12p1.BoundedBuffer;
 import listing12p11.BarrierTimer;
-import listing12p5.PutTakeTest;
 
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
