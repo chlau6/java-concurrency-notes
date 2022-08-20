@@ -63,7 +63,7 @@ public class TryLockDemo {
 /*
 The timed and polled lock-acqusition modes provided by tryLock
 allow more sophisticated error recovery than unconditional acquisition.
-With intrinsic locks, a deadlock is fatal—the only way to recover is to restart the application,
+With intrinsic locks, a deadlock is fatal - the only way to recover is to restart the application,
 and the only defense is to construct your program so that inconsistent lock ordering is impossible.
 Timed and polled locking offer another option: probabalistic deadlock avoidance.
 

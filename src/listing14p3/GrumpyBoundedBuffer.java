@@ -33,11 +33,11 @@ since both employ check-then-act logic in accessing the buffer.
 
 While this approach is easy enough to implement, it is annoying to use.
 Exceptions are supposed to be for exceptional conditions.
-“Buffer is full” is not an exceptional condition for a bounded buffer
-any more than “red” is an exceptional condition for a traffic signal.
+"Buffer is full" is not an exceptional condition for a bounded buffer
+any more than "red" is an exceptional condition for a traffic signal.
 The simplification in implementing the buffer (forcing the caller to manage the state dependence)
 is more than made up for by the substantial complication in using it,
 since now the caller must be prepared to catch exceptions and possibly retry for every buffer operation.
-A well-structured call to take is shown in Listing 14.4—not very pretty,
+A well-structured call to take is shown in Listing 14.4 - not very pretty,
 especially if put and take are called throughout the program.
 */

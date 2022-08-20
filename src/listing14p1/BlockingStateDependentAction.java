@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class BlockingStateDependentActionDemo<K,V> {
+public class BlockingStateDependentAction<K,V> {
     /*
     void blockingAction() throws InterruptedException {
         acquire lock on object state
@@ -32,7 +32,7 @@ we first show how state dependence might be (painfully) tackled using polling an
 
 A blocking state-dependent action takes the form shown in Listing 14.1.
 The pattern of locking is somewhat unusual in that the lock is released and reacquired in the middle of the operation.
-The state variables that make up the precondition must be guarded by the object’s lock,
+The state variables that make up the precondition must be guarded by the object's lock,
 so that they can remain constant while the precondition is tested.
 But if the precondition does not hold, the lock must be released so another thread can modify the object state -
 otherwise the precondition will never become true.

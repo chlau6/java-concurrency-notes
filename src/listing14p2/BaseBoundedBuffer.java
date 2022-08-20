@@ -53,12 +53,12 @@ Bounded buffers such as ArrayBlockingQueue are commonly used in producer-consume
 A bounded buffer provides put and take operations, each of which has preconditions:
 you cannot take an element from an empty buffer, nor put an element into a full buffer.
 State dependent operations can deal with precondition failure by throwing an exception or returning an error status
-(making it the caller’s problem), or by blocking until the object transitions to the right state.
+(making it the caller's problem), or by blocking until the object transitions to the right state.
 
-We’re going to develop several implementations of a bounded buffer that
+We're going to develop several implementations of a bounded buffer that
 take different approaches to handling precondition failure.
 Each extends BaseBoundedBuffer in Listing 14.2, which implements a classic array-based circular buffer where
-the buffer state variables (buf, head, tail, and count) are guarded by the buffer’s intrinsic lock.
+the buffer state variables (buf, head, tail, and count) are guarded by the buffer's intrinsic lock.
 It provides synchronized doPut and doTake methods that are used by subclasses to implement the put and take operations;
 the underlying state is hidden from the subclasses.
 */

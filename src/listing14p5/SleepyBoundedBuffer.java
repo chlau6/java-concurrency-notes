@@ -35,10 +35,10 @@ public class SleepyBoundedBuffer<V> extends BaseBoundedBuffer<V> {
 
 /*
 SleepyBoundedBuffer in Listing 14.5 attempts to spare callers the inconvenience of implementing the retry logic
-on each call by encapsulating the same crude “poll and sleep” retry mechanism within the put and take operations.
+on each call by encapsulating the same crude "poll and sleep" retry mechanism within the put and take operations.
 If the buffer is empty, take sleeps until another thread puts some data into the buffer;
 if the buffer is full, put sleeps until another thread makes room by removing some data.
-This approach encapsulates precondition management and simplifies using the buffer —
+This approach encapsulates precondition management and simplifies using the buffer - 
 definitely a step in the right direction.
 
 The implementation of SleepyBoundedBuffer is more complicated than the previous attempt.
@@ -50,11 +50,11 @@ Once the thread wakes up, it reacquires the lock and tries again,
 alternating between sleeping and testing the state condition until the operation can proceed.
 
 From the perspective of the caller, this works nicely - if the operation can proceed immediately, it does,
-and otherwise it blocks—and the caller need not deal with the mechanics of failure and retry.
+and otherwise it blocks - and the caller need not deal with the mechanics of failure and retry.
 Choosing the sleep granularity is a tradeoff between responsiveness and CPU usage;
 the smaller the sleep granularity, the more responsive, but also the more CPU resources consumed.
 
-SleepyBoundedBuffer also creates another requirement for the caller—dealing with InterruptedException.
+SleepyBoundedBuffer also creates another requirement for the caller - dealing with InterruptedException.
 When a method blocks waiting for a condition to become true,
 the polite thing to do is to provide a cancellation mechanism.
 Like most well-behaved blocking library methods, SleepyBoundedBuffer supports cancellation through interruption,

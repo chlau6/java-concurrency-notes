@@ -72,7 +72,7 @@ public class ConditionBoundedBuffer<T> {
 
 /*
 Listing 14.11 shows yet another bounded buffer implementation, this time using two Conditions, notFull and notEmpty,
-to represent explicitly the “not full” and “not empty” condition predicates.
+to represent explicitly the "not full" and "not empty" condition predicates.
 When take blocks because the buffer is empty, it waits on notEmpty,
 and put unblocks any threads blocked in take by signaling on notEmpty.
 

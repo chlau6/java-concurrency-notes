@@ -10,12 +10,16 @@ public class ConditionalNotificationDemo<V> extends BaseBoundedBuffer<V> {
     }
 
     public synchronized void put(V v) throws InterruptedException {
-        while (isFull())
+        while (isFull()) {
             wait();
+        }
+
         boolean wasEmpty = isEmpty();
         doPut(v);
-        if (wasEmpty)
+
+        if (wasEmpty) {
             notifyAll();
+        }
     }
 }
 

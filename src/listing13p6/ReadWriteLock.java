@@ -9,7 +9,7 @@ public interface ReadWriteLock {
 }
 
 /*
-ReadWriteLock, shown in Listing 13.6, exposes two Lock objects—one for reading and one for writing.
+ReadWriteLock, shown in Listing 13.6, exposes two Lock objects - one for reading and one for writing.
 To read data guarded by a ReadWriteLock you must first acquire the read lock,
 and to modify data guarded by a ReadWriteLock you must first acquire the write lock.
 While there may appear to be two separate locks,

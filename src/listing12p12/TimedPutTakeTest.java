@@ -115,5 +115,5 @@ One is the throughput of the producer-consumer handoff operation for various com
 another is how the bounded buffer scales with different numbers of threads;
 a third is how we might select the bound size.
 Answering these questions requires running the test for various combinations of parameters,
-so we’ll need a main test driver, shown in Listing 12.13.
+so we'll need a main test driver, shown in Listing 12.13.
 */

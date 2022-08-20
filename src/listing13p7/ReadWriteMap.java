@@ -56,7 +56,7 @@ Read-write locks can improve concurrency when locks are typically held for a mod
 most operations do not modify the guarded resources.
 ReadWriteMap in Listing 13.7 uses a ReentrantReadWriteLock to wrap a Map so that
 it can be shared safely by multiple readers and still prevent reader-writer or writer-writer conflicts.
-In reality, ConcurrentHashMap’s performance is so good that you would probably use it rather than this approach if
+In reality, ConcurrentHashMap's performance is so good that you would probably use it rather than this approach if
 all you needed was a concurrent hash-based map, but this technique would be useful if
 you want to provide more concurrent access to an alternate Map implementation such as LinkedHashMap.
 */
